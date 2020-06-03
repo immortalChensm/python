@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" action="/postfile">
+
+        <input type="text" name="user">
+        <input type="password" name="pwd">
+        <input type="checkbox" value="money" name="hobby">money
+        <input type="checkbox" value="beatufy" name="hobby">beatufy
+        <input type="checkbox" value="power" name="hobby">power
+        <input type="submit">
+    </form>
+
+<script type="text/javascript">
+
+    function getCookie(name){
+        var cookie = document.cookie;
+        alert(cookie);
+    }
+
+    window.addEventListener("load",function (ev) {
+        getCookie("ok")
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+2018-05-01 17:11:11,046--rezi.py--[line:61]--INFO--这里是info信息
+2018-05-01 17:11:11,047--rezi.py--[line:63]--ERROR--这里是error信息
+2018-05-01 17:11:11,047--rezi.py--[line:64]--WARNING--这里是warning信息
+2018-05-01 17:11:11,047--rezi.py--[line:65]--CRITICAL--这里是critical信息

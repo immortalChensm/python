@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传文件</title>
+</head>
+<body>
+    <form method="post" action="/upfile" enctype="multipart/form-data">
+        <input type="file" name="file"/>
+        <input type="file" name="file"/>
+        <input type="file" name="img"/>
+        <input type="submit" value="上传"/>
+    </form>
+</body>
+</html>
+
+./configure --prefix=/home/soft/php --enable-fpm --enable-pcntl --enable-mysqlnd --enable-opcache --enable-sockets --enable-sysvmsg --enable-sysvsem --enable-sysvshm --enable-shmop --enable-zip --enable-soap --enable-xml --enable-mbstring --disable-rpath --disable-debug --disable-fileinfo --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --with-pcre-regex --with-iconv --with-zlib --with-gd --with-openssl --with-mhash --with-xmlrpc --with-curl --with-imap-ssl

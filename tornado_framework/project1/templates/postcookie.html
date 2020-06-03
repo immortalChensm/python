@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+当前计数值是:{{count}}
+    <form method="post" action="/showcookie">
+        <input type="hidden" name="_xsrf" id="xs" />
+        <input type="text" name="user">
+        <input type="password" name="pwd">
+        <input type="checkbox" value="money" name="hobby">money
+        <input type="checkbox" value="beatufy" name="hobby">beatufy
+        <input type="checkbox" value="power" name="hobby">power
+        <input type="submit">
+    </form>
+
+<script type="text/javascript">
+
+    function getCookie(name){
+        var cookie = document.cookie.match(/_xsrf=([^;]+)/);
+        return cookie;
+    }
+
+    window.addEventListener("load",function (ev) {
+        var str = getCookie("_xsrf")
+        alert(str.valueOf().substring(6));
+    })
+</script>
+</body>
+</html>

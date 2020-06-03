@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" action="http://127.0.0.1:1234/postcookie">
+
+        <input type="text" name="user">
+        <input type="password" name="pwd">
+        <input type="submit">
+    </form>
+
+<script type="text/javascript">
+
+    function getCookie(name){
+        var cookie = document.cookie;
+        alert(cookie);
+    }
+
+    window.addEventListener("load",function (ev) {
+        getCookie("ok")
+    })
+</script>
+</body>
+</html>

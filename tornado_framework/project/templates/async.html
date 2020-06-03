@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" action="/addCookieNum">
+        {% module xsrf_form_html() %}
+        <input type="text" name="user">
+        <input type="password" name="pwd">
+
+        <input type="submit">
+    </form>
+
+<script type="text/javascript">
+
+    function getCookie(name){
+        var cookie = document.cookie.substring(0,document.cookie.lastIndexOf(";"));
+        cookie = cookie.replace("_xsrf=","");
+        return cookie;
+    }
+
+    window.addEventListener("load",function (ev) {
+
+
+        document.onclick = function (ev2) {
+
+
+
+        }
+         data = {
+            "name":"jack",
+            "age":200,
+             };
+        ajax({
+            url:"/async",
+            type:'POST',
+            data:JSON.stringify(data),
+            success:function(xhr){
+                alert(xhr.responseBody);
+            },
+        });
+        alert("nihao");
+
+    })
+
+    function ajax(obj)
+    {
+        var xhr = new XMLHttpRequest();
+        //xhr.async = obj.async;
+
+        xhr.onreadystatechange = function (ev2) {
+            if(xhr.readyState==4&&xhr.status==200){
+                obj.success(xhr);
+            }
+        }
+         xhr.open('POST',obj.url);
+        xhr.setRequestHeader("X-XSRFToken",obj.token);
+        xhr.setRequestHeader("Content-type","application/json");
+
+        xhr.send(obj.data);
+    }
+</script>
+</body>
+</html>

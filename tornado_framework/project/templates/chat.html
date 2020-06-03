@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jack</title>
+    <link rel="stylesheet" type="text/css" href="{{static_url('css/home.css')}}">
+
+</head>
+<body>
+   <div style="width:400px;height:450px;border:1px solid black;margin:10px auto;"></div>
+   <div style="width:400px;margin:10px auto;">
+       <textarea id="msg"></textarea>
+       <input type="button" value="send" id="send">
+   </div>
+    <script>
+        var ws = new WebSocket("ws://127.0.0.1:9000/chat");
+        document.getElementById("send").onclick = function (ev) {
+            ws.send(document.getElementById("msg").value)
+            document.getElementById("msg").value=""
+        }
+        ws.onmessage = function (ev) {
+            document.getElementsByTagName("div")[0].innerHTML = "<p>"+ev.data+"</p>";
+        }
+    </script>
+</body>
+</html>

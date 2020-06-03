@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jack</title>
+    <link rel="stylesheet" type="text/css" href="{{static_url('css/home.css')}}">
+    <script type="text/javascript" src="statics/js/home.js"></script>
+</head>
+<body>
+    hi,this is jack websites---{{ num }}
+
+    <h1>{{num+9922}}</h1>
+
+<div>{{ person['name']}}</div>
+
+{% if flag==2%}
+    我是有钱人
+    {% else %}
+    我是更加富有的人
+{% end %}
+
+<ul>
+    {% for stu in student %}
+        <li>{{ stu['name'] }}--{{ stu['age'] }}</li>
+    {% end %}
+</ul>
+</body>
+</html>

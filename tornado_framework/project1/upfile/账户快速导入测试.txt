@@ -1,0 +1,22 @@
+﻿账户快速导入测试
+工具测试地址：https://avc.qcloud.com/im/APITester/APITester.html?_ga=1.18308465.977434176.1527297309#v4/im_open_login_svc/account_import
+
+SdkAppid:1400093730
+Identifier:quhecha
+UserSig:eJxNzVtvgjAYgOH-0tstoxy6DhMvmOImU*MiWRghIR39hKIg0qJTs-**hmi22-f5DhcUzlYPLMt2Xa1SdWoADRBG930WHGol1gJaHfddAVnBrsSaRvCUqdRu*b8NyTdpT7qZDsbYtal9Q-huRAspW6v*oEkIsfTIVQ-QSrGrNVjYJKZlY-yHSlTQr1jUobZFn27-RK7z3H8fTcfS7ZrRgfHnpYzd6FwuEuPrY7x9KRblBAOZV6EzM4*v*3hz8oQX1FCGpIimWfcoquLzTp6pv8zjduIlRrSlHHwvKFd5kBhv*XCIfn4BNThZ8w__
+
+
+API:account_import
+
+请求的包体
+{
+   "Identifier":"用户的id",
+   "Nick":"用户的昵称",
+}
+
+登录获取userSign
+接口：www.quhechacn.com/api/live/getImUserSign?token=6341e52cf8f677e3f8ad9681918b5013
+token=当前登录的用户名
+
+post以下参数
+roomid=主播的房间号

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据库</title>
+    <link rel="stylesheet" href="{{static_url('css/index.css')}}">
+</head>
+<body>
+    <h1>管理员列表</h1>
+    <ul>
+
+        <li>{{ lists['name'] }}</li>
+        <li>{{ lists['email']}}</li>
+        <li><img src="{{ lists['head_pic'] }}"/></li>
+    </ul>
+</body>
+</html>
